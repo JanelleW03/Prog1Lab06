@@ -20,6 +20,12 @@ def encode(p):
     encoded_password = "".join(encoded_password)
     return encoded_password
 
+def decode(encoded):
+    decoder = ""
+    for char in encoded:
+        decoder += str((int(char)-3)%10)
+    return decoder
+
 if __name__ == "__main__":
     while True:
         menu()
